@@ -1,3 +1,10 @@
 # Project_KB
 # Juan P Kuganda
 # F55123061
+<p text-align="justify">Convolutional Neural Network (CNN) yang menggunakan arsitektur VGG16 sebagai model dasar. Pertama, dataset dipisahkan menjadi data training dan testing dengan membagi gambar dalam setiap folder teman menjadi 80% untuk training dan 20% untuk testing. Data augmentation diterapkan pada data training untuk meningkatkan keragaman data dan mencegah overfitting, sementara data testing hanya dinormalisasi. Model dasar VGG16 yang telah dilatih sebelumnya pada dataset ImageNet digunakan sebagai basis, diikuti oleh beberapa lapisan tambahan untuk klasifikasi. Model ini terdiri dari lapisan flatten, dense dengan 256 unit dan aktivasi ReLU, dropout dengan rate 0.5, dan dense output layer dengan aktivasi softmax sesuai dengan jumlah kelas.
+
+Model dilatih menggunakan data training dan divalidasi menggunakan data testing selama 20 epoch. Setelah pelatihan awal, beberapa lapisan dari model dasar VGG16 dibuka untuk pelatihan lebih lanjut (fine-tuning) untuk meningkatkan kinerja model. Fine-tuning dilakukan dengan membuka lapisan dari layer ke-15 ke atas dan melatih model selama 10 epoch tambahan dengan learning rate yang lebih rendah. Model kemudian dievaluasi pada data testing untuk mendapatkan akurasi, yang ditampilkan dalam bentuk persentase. Hasil evaluasi menunjukkan akurasi model pada data testing, dan grafik akurasi training dan validation juga ditampilkan untuk analisis lebih lanjut. Akhirnya, model disimpan dalam format Keras dengan nama "Amin_model.keras".
+
+Model ini menggunakan transfer learning dengan VGG16 dan data augmentation untuk meningkatkan akurasi dan generalisasi. Fine-tuning dilakukan untuk lebih mengoptimalkan model pada dataset spesifik Anda. Teknik data augmentation yang digunakan termasuk rotasi, pergeseran lebar dan tinggi, shear, zoom, flip horizontal, dan perubahan kecerahan, yang semuanya membantu dalam meningkatkan keragaman data pelatihan dan mencegah overfitting. Dengan pendekatan ini, model diharapkan dapat mencapai akurasi yang lebih tinggi dan performa yang lebih baik pada tugas klasifikasi gambar yang diberikan.
+
+</p>
